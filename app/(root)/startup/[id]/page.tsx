@@ -51,7 +51,7 @@ const page = async ({ params }: { params: { id: string } }) => {
         <div className="space-y-5 mt-10 max-w-4xl mx-auto">
           <div className="flex-between gap-5">
             <Link
-              href={"/user/${post.author?._id}"}
+              href={`/user/${post.author?._id}`}
               className="flex gap-2 items-center mb-3"
             >
               <Image
@@ -72,14 +72,14 @@ const page = async ({ params }: { params: { id: string } }) => {
 
             <p className="category-tag">{post.category}</p>
           </div>
-          <h3 className="text-30-bold">Pitch etails</h3>
+          <h3 className="text-30-bold">Pitch Details</h3>
           {parsedContent ? (
             <article
               className="prose max-w-4xl font-work-sans break-all"
               dangerouslySetInnerHTML={{ __html: parsedContent }}
             />
           ) : (
-            <p className="no-result">No etails provided</p>
+            <p className="no-result">No Details provided</p>
           )}
         </div>
         <hr className="divider" />
