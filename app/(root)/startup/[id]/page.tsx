@@ -19,7 +19,7 @@ import StartupCard, { StartupTypeCard } from "@/components/StartupCard";
 const md = markDownIt();
 
 const page = async ({ params }: { params: { id: string } }) => {
-  const { id } = params;
+  const id = params?.id;
 
   // Parallel fetching
   const [post, { select: editorPosts }] = await Promise.all([
