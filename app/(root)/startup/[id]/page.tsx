@@ -29,10 +29,6 @@ const page = async ({ params }: { params: { id: string } }) => {
     }),
   ]);
 
-  // const post = await
-
-  // const { select: editorPosts } = await
-
   if (!post) return notFound();
 
   const parsedContent = md.render(post.pitch || "");
@@ -89,7 +85,7 @@ const page = async ({ params }: { params: { id: string } }) => {
         <hr className="divider" />
         {editorPosts?.length > 0 ? (
           <div className="max-w-4xl mx-auto">
-            <p className="text-30-semibold">Editor's picks</p>
+            <p className="text-30-semibold">Editor{"'"}s picks</p>
             <ul className="mt-7 card_grid-sm">
               {editorPosts.map((post: StartupTypeCard, index: number) => (
                 <StartupCard post={post} key={index} />

@@ -1,5 +1,4 @@
 import { auth } from "@/auth";
-import StartupCard, { StartupTypeCard } from "@/components/StartupCard";
 import UserStartups, { StartupCardSkeleton } from "@/components/UserStartups";
 import { client } from "@/sanity/lib/client";
 import { sanityFetch, SanityLive } from "@/sanity/lib/live";
@@ -17,7 +16,6 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
   const session = await auth();
   const user = await client.fetch(AUTHOR_BY_ID_QUERY, { id });
 
-  //   const startups = await client.fetch(STARTUPS_BY_AUTHOR_ID_QUERY, { id });
   const { data: startups } = await sanityFetch({
     query: STARTUPS_BY_AUTHOR_ID_QUERY,
     params: { id },
