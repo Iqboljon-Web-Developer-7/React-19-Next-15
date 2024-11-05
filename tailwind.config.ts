@@ -14,6 +14,10 @@ const config: Config = {
         xs: "475px",
       },
       colors: {
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
         primary: {
           "100": "#FFE8F0",
           DEFAULT: "#EE2B69",
