@@ -1,3 +1,4 @@
+import React, { Suspense } from "react";
 import { auth } from "@/auth";
 import UserStartups, { StartupCardSkeleton } from "@/components/UserStartups";
 import { client } from "@/sanity/lib/client";
@@ -8,7 +9,6 @@ import {
 } from "@/sanity/lib/queries";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import React, { Suspense } from "react";
 
 const page = async ({ params }: { params: Promise<{ id: string }> }) => {
   const { id } = await params;

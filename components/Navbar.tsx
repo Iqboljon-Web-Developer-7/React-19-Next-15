@@ -27,6 +27,7 @@ const Navbar = async () => {
 
                   await signOut({ redirectTo: "/" });
                 }}
+                className="flex"
               >
                 <button type="submit">
                   <span className="max-sm:hidden">Logout</span>

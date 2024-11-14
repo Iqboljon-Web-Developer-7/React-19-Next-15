@@ -25,7 +25,7 @@ const page = async ({ params }: { params: { id: string } }) => {
   const [post, { select: editorPosts }] = await Promise.all([
     client.fetch(STARTUPS_SINGLE_QUERY, { id }),
     client.fetch(PLAYLIST_BY_SLUG_QUERY, {
-      slug: "editor-picks",
+      slug: "editors-picks",
     }),
   ]);
 
